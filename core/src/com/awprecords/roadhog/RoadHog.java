@@ -4,7 +4,6 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 
 import Scenes.HUD;
-import Screens.AboutScreen;
 import Screens.Awprecords;
 import Screens.DoubleScreen;
 import Screens.ExtraScreen;
@@ -23,7 +22,6 @@ public class RoadHog extends Game {
     public static MenuScreen menuScreen;
     public static GarageScreen garageScreen;
     public static SettingsScreen settingsScreen;
-    public static AboutScreen aboutScreen;
     public static MainGame mainGame;
     public static PauseScreen pauseScreen;
     public static GameOverScreen gameOverScreen;
@@ -71,13 +69,6 @@ public class RoadHog extends Game {
             mainGame.obnulit();
         game.setScreen(mainGame);
         Gdx.input.setInputProcessor(HUD.stage);
-    }
-
-    public void setAboutScreen(RoadHog game) {
-        if (aboutScreen == null)
-            aboutScreen = new AboutScreen(this);
-        game.setScreen(aboutScreen);
-        Gdx.input.setInputProcessor(AboutScreen.stage);
     }
 
     public void setSettingsScreen(RoadHog game) {

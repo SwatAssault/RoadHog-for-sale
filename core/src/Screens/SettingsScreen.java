@@ -37,9 +37,6 @@ public class SettingsScreen implements Screen {
     public static ArrayList<TextureRegionDrawable> on_off_textures;
 
     ImageButton goback;
-
-    ImageButton about_btn;
-
     Image settings_bg;
 
     SpriteBatch batch;
@@ -181,22 +178,6 @@ public class SettingsScreen implements Screen {
         about_btn_texture = new Texture("buttons/about_btn.png");
         about_btn_texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
 
-        about_btn = new ImageButton(
-                new TextureRegionDrawable(about_btn_texture),
-                new TextureRegionDrawable(about_btn_pressed_texture)
-        );
-
-        about_btn.addListener(new ClickListener() {
-
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-//                dispose();
-//                game.setScreen(new AboutScreen(game));
-                game.setAboutScreen(game);
-                RoadHog.soundManager.run_click_sound();
-            }
-        });
-
         table = new Table();
         table_top = new Table();
         table_top_1 = new Table();
@@ -218,7 +199,6 @@ public class SettingsScreen implements Screen {
 
         table2.setFillParent(true);
         stage.addActor(table2);
-        table2.add(about_btn).bottom().right().expand().padBottom(290).padRight(240);
         table.add(goback).expand().right().top().padRight(15).padTop(15);
 
         for (Image a : on_off_mass) {

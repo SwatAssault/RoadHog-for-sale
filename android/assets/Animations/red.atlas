@@ -1,0 +1,47 @@
+
+red.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Police_Beacons_Red
+  rotate: false
+  xy: 1, 55
+  size: 264, 52
+  orig: 264, 52
+  offset: 0, 0
+  index: 0
+Police_Beacons_Red
+  rotate: false
+  xy: 1, 1
+  size: 264, 52
+  orig: 264, 52
+  offset: 0, 0
+  index: 1
+Police_Beacons_Red
+  rotate: false
+  xy: 267, 55
+  size: 264, 52
+  orig: 264, 52
+  offset: 0, 0
+  index: 2
+Police_Beacons_Red
+  rotate: false
+  xy: 267, 1
+  size: 264, 52
+  orig: 264, 52
+  offset: 0, 0
+  index: 3
+Police_Beacons_Red
+  rotate: false
+  xy: 267, 1
+  size: 264, 52
+  orig: 264, 52
+  offset: 0, 0
+  index: 4
+Police_Beacons_Red
+  rotate: false
+  xy: 533, 55
+  size: 264, 52
+  orig: 264, 52
+  offset: 0, 0
+  index: 5

@@ -1,0 +1,12 @@
+
+locked.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+locked_img
+  rotate: false
+  xy: 1, 1
+  size: 414, 267
+  orig: 414, 267
+  offset: 0, 0
+  index: -1

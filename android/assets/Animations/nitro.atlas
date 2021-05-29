@@ -1,0 +1,75 @@
+
+nitro.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Nitro
+  rotate: false
+  xy: 1, 1
+  size: 60, 196
+  orig: 60, 196
+  offset: 0, 0
+  index: 0
+Nitro
+  rotate: false
+  xy: 63, 1
+  size: 60, 196
+  orig: 60, 196
+  offset: 0, 0
+  index: 1
+Nitro
+  rotate: false
+  xy: 125, 1
+  size: 60, 196
+  orig: 60, 196
+  offset: 0, 0
+  index: 2
+Nitro
+  rotate: false
+  xy: 187, 1
+  size: 60, 196
+  orig: 60, 196
+  offset: 0, 0
+  index: 3
+Nitro
+  rotate: false
+  xy: 249, 1
+  size: 60, 196
+  orig: 60, 196
+  offset: 0, 0
+  index: 4
+Nitro
+  rotate: false
+  xy: 311, 1
+  size: 60, 196
+  orig: 60, 196
+  offset: 0, 0
+  index: 5
+Nitro
+  rotate: false
+  xy: 373, 1
+  size: 60, 196
+  orig: 60, 196
+  offset: 0, 0
+  index: 6
+Nitro
+  rotate: false
+  xy: 435, 1
+  size: 60, 196
+  orig: 60, 196
+  offset: 0, 0
+  index: 7
+Nitro
+  rotate: false
+  xy: 497, 1
+  size: 60, 196
+  orig: 60, 196
+  offset: 0, 0
+  index: 8
+Nitro
+  rotate: false
+  xy: 559, 1
+  size: 60, 196
+  orig: 60, 196
+  offset: 0, 0
+  index: 9

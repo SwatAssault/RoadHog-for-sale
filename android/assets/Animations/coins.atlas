@@ -1,0 +1,54 @@
+
+coins.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+coin000
+  rotate: false
+  xy: 1, 1
+  size: 32, 34
+  orig: 32, 34
+  offset: 0, 0
+  index: -1
+coin001
+  rotate: false
+  xy: 35, 1
+  size: 32, 34
+  orig: 32, 34
+  offset: 0, 0
+  index: -1
+coin002
+  rotate: false
+  xy: 69, 1
+  size: 32, 34
+  orig: 32, 34
+  offset: 0, 0
+  index: -1
+coin003
+  rotate: false
+  xy: 103, 1
+  size: 32, 34
+  orig: 32, 34
+  offset: 0, 0
+  index: -1
+coin004
+  rotate: false
+  xy: 137, 1
+  size: 32, 34
+  orig: 32, 34
+  offset: 0, 0
+  index: -1
+coin005
+  rotate: false
+  xy: 171, 1
+  size: 32, 34
+  orig: 32, 34
+  offset: 0, 0
+  index: -1
+coin006
+  rotate: false
+  xy: 205, 1
+  size: 32, 34
+  orig: 32, 34
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,61 @@
+
+escape.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+escape0
+  rotate: false
+  xy: 1, 201
+  size: 379, 48
+  orig: 379, 48
+  offset: 0, 0
+  index: -1
+escape1
+  rotate: false
+  xy: 1, 151
+  size: 379, 48
+  orig: 379, 48
+  offset: 0, 0
+  index: -1
+escape2
+  rotate: false
+  xy: 382, 201
+  size: 379, 48
+  orig: 379, 48
+  offset: 0, 0
+  index: -1
+escape3
+  rotate: false
+  xy: 1, 101
+  size: 379, 48
+  orig: 379, 48
+  offset: 0, 0
+  index: -1
+escape4
+  rotate: false
+  xy: 382, 151
+  size: 379, 48
+  orig: 379, 48
+  offset: 0, 0
+  index: -1
+escape5
+  rotate: false
+  xy: 1, 51
+  size: 379, 48
+  orig: 379, 48
+  offset: 0, 0
+  index: -1
+escape6
+  rotate: false
+  xy: 382, 101
+  size: 379, 48
+  orig: 379, 48
+  offset: 0, 0
+  index: -1
+escape7
+  rotate: false
+  xy: 1, 1
+  size: 379, 48
+  orig: 379, 48
+  offset: 0, 0
+  index: -1

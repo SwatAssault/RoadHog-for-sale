@@ -133,8 +133,8 @@ public class HUD {
         stage.addActor(table);
         table.setFillParent(true);
 
-        table.add(HP_image).left().padLeft(65).padTop(100);
-        table.add(pause_btn).right().pad(10).padTop(100);
+        table.add(HP_image).left().padLeft(65).padTop(0);
+        table.add(pause_btn).right().pad(10).padTop(20);
         table.row();
         table.add(coin_image).colspan(2).right().padRight(10);
         table.row();

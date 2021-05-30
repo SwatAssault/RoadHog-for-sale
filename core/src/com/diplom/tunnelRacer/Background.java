@@ -1,4 +1,4 @@
-package com.awprecords.roadhog;
+package com.diplom.tunnelRacer;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -11,7 +11,7 @@ import static utils.Constants.PPM;
 
 public class Background {
 
-    public void obnulit() {
+    public void setDefaultValues() {
         backs[0].setPos(0, 0);
         backs[1].setPos(0, 1920);
         backs[2].setPos(0, 3840);

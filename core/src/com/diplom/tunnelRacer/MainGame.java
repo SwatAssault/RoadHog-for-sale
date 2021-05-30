@@ -1,11 +1,9 @@
-package com.awprecords.roadhog;
+package com.diplom.tunnelRacer;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
-import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -15,20 +13,15 @@ import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.utils.TimeUtils;
-
-import java.awt.event.KeyEvent;
 
 import Scenes.HUD;
 import Screens.GameOverScreen;
 import Screens.MenuScreen;
-import shit.*;
-
-import static utils.Constants.PPM;
+import items.*;
 
 public class MainGame implements Screen {
-    final RoadHog game;
+    final TunnelRacer game;
 
     public static int score;
     public static boolean reIIIenieProblembl;
@@ -41,7 +34,7 @@ public class MainGame implements Screen {
     public static Racer racer;
     public static Driver driver;
     public static Pits pits;
-    public static Police ment;
+    public static Police police;
     public static Coins coins;
     public static Busters busters;
 
@@ -86,10 +79,10 @@ public class MainGame implements Screen {
         HP = 3;
         is_hit = false;
         timeForStage1 = TimeUtils.millis();
-        ment.kill();
+        police.kill();
         racer.obnulit();
         driver.obnulit();
-        bg.obnulit();
+        bg.setDefaultValues();
 //        if (is_paused) {
         is_paused = false;
         busters.obnulit();
@@ -101,7 +94,7 @@ public class MainGame implements Screen {
         GameOverScreen.is_double_once_pressed = false;
     }
 
-    public MainGame(final RoadHog game) {
+    public MainGame(final TunnelRacer game) {
         layout = new GlyphLayout();
         reIIIenieProblembl = true;
 
@@ -153,7 +146,7 @@ public class MainGame implements Screen {
         coins = new Coins();
         busters = new Busters();
 
-        ment = new Police();
+        police = new Police();
 
         timeForStage1 = TimeUtils.millis();
         upLvl();
@@ -194,8 +187,8 @@ public class MainGame implements Screen {
         if (!GameOver)
             racer.render(batch);
 
-        if (ment.isCreate && Driver.pogonya) {
-            ment.render(batch);
+        if (police.isCreate && Driver.pogonya) {
+            police.render(batch);
             animations.render_red_beacon(batch);
             animations.render_blue_beacon(batch);
             if (Police.tap_count < 10)
@@ -253,12 +246,12 @@ public class MainGame implements Screen {
 
         driver.update();
 
-        RoadHog.soundManager.run_police_sound();
+        TunnelRacer.soundManager.run_police_sound();
 
-        if (!ment.isCreate && (int) (Racer.score) / 150 == lvl + 1)
-            ment.create();
-        if (ment.isCreate)
-            ment.update();
+        if (!police.isCreate && (int) (Racer.score) / 150 == lvl + 1)
+            police.create();
+        if (police.isCreate)
+            police.update();
     }
 
     public void if_paused() {
@@ -305,7 +298,7 @@ public class MainGame implements Screen {
         driver.countCar = 4 + (int) (lvl * 0.5f) <= 8 ? 4 + (int) (lvl * 0.5f) : 8;
         bg.setSpeed(7 + lvl <= 11 ? 7 + lvl : 11);
         racer.setStageStepScore(1f - lvl * 0.05f > 0 ? 1f - lvl * 0.05f : 0.05f);
-        ment.delta = 0.5f - (lvl - 1) / 15f > 0 ? 0.5f - (lvl - 1) / 15f : 0.09f;
+        police.delta = 0.5f - (lvl - 1) / 15f > 0 ? 0.5f - (lvl - 1) / 15f : 0.09f;
     }
 
     public static void drawNewStage() {
@@ -320,7 +313,7 @@ public class MainGame implements Screen {
         hud.dispose();
         racer.dispose();
         driver.dispose();
-        ment.dispose();
+        police.dispose();
         //    bg.dispose();
         //  batch.dispose();
         //b2dr.dispose();

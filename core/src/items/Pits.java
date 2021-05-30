@@ -1,7 +1,7 @@
-package shit;
+package items;
 
-import com.awprecords.roadhog.Driver;
-import com.awprecords.roadhog.MainGame;
+import com.diplom.tunnelRacer.Driver;
+import com.diplom.tunnelRacer.MainGame;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;

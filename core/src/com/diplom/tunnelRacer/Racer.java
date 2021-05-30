@@ -1,4 +1,4 @@
-package com.awprecords.roadhog;
+package com.diplom.tunnelRacer;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -7,14 +7,11 @@ import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.utils.TimeUtils;
 
 import Scenes.HUD;
-import Screens.GarageScreen;
 import Screens.MenuScreen;
-import shit.Coins;
+import items.Coins;
 
 import static utils.Constants.PPM;
 
@@ -179,7 +176,7 @@ public class Racer {
                     isNewStage = true;
                 } else {
                     Police.isCreate = false;
-                    MainGame.ment.kill();
+                    MainGame.police.kill();
                     isNewStage = false;
                     MainGame.driver.start();
                 }

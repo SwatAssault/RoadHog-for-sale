@@ -1,15 +1,14 @@
 package Screens;
 
-import com.awprecords.roadhog.MainGame;
-import com.awprecords.roadhog.PrefferencesManager;
-import com.awprecords.roadhog.RoadHog;
+import com.diplom.tunnelRacer.MainGame;
+import com.diplom.tunnelRacer.PrefferencesManager;
+import com.diplom.tunnelRacer.TunnelRacer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
@@ -84,7 +83,7 @@ public class MenuScreen implements Screen {
 
     public static boolean[] on_off_switches;
 
-    public MenuScreen(final RoadHog game) {
+    public MenuScreen(final TunnelRacer game) {
         this.game = game;
 
         tapToPlay = new ImageButton(new TextureRegionDrawable(new Texture("go.png")));
@@ -171,7 +170,7 @@ public class MenuScreen implements Screen {
 
             @Override
             public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-                RoadHog.soundManager.run_click_sound();
+                TunnelRacer.soundManager.run_click_sound();
                 game.setSettingsScreen(game);
             }
         });
@@ -187,7 +186,7 @@ public class MenuScreen implements Screen {
 
             @Override
             public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-                RoadHog.soundManager.run_click_sound();
+                TunnelRacer.soundManager.run_click_sound();
                 System.exit(0);
             }
         });
@@ -205,7 +204,7 @@ public class MenuScreen implements Screen {
 
             @Override
             public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-                RoadHog.soundManager.run_click_sound();
+                TunnelRacer.soundManager.run_click_sound();
                 game.setGarageScreen(game);
             }
         });
@@ -216,10 +215,10 @@ public class MenuScreen implements Screen {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 game.setMainGame(game, true);
-                RoadHog.soundManager.stop_menu_music();
-                RoadHog.soundManager.run_game_music();
+                TunnelRacer.soundManager.stop_menu_music();
+                TunnelRacer.soundManager.run_game_music();
                 if (MenuScreen.on_off_switches[0] == false) {
-                    RoadHog.soundManager.game_music.setVolume(0);
+                    TunnelRacer.soundManager.game_music.setVolume(0);
                 }
             }
         });
@@ -250,7 +249,7 @@ public class MenuScreen implements Screen {
 
         Gdx.gl.glClearColor(0, 0, 0, 0);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        if (game.getScreen() != RoadHog.welcomeScreen)
+        if (game.getScreen() != TunnelRacer.welcomeScreen)
             update();
 
 
@@ -268,7 +267,7 @@ public class MenuScreen implements Screen {
         }
     }
 
-    final RoadHog game;
+    final TunnelRacer game;
 
 
     public void update() {

@@ -1,8 +1,8 @@
 package Screens;
 
-import com.awprecords.roadhog.MainGame;
-import com.awprecords.roadhog.Racer;
-import com.awprecords.roadhog.RoadHog;
+import com.diplom.tunnelRacer.MainGame;
+import com.diplom.tunnelRacer.Racer;
+import com.diplom.tunnelRacer.TunnelRacer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
@@ -14,7 +14,6 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
@@ -47,7 +46,7 @@ public class GameOverScreen implements Screen {
     private Texture double_texture;
     private ImageButton double_btn;
 
-    public static RoadHog game;
+    public static TunnelRacer game;
 
     private ImageButton restart_btn;
     private FreeTypeFontGenerator fontGenerator;
@@ -57,7 +56,7 @@ public class GameOverScreen implements Screen {
 
     public static boolean isX2;
 
-    public GameOverScreen(final RoadHog game) {
+    public GameOverScreen(final TunnelRacer game) {
 
         this.game = game;
         isX2 = false;
@@ -94,7 +93,7 @@ public class GameOverScreen implements Screen {
 
                 if (!is_double_once_pressed) {
                     game.setDoubleScreen(game);
-                    RoadHog.soundManager.run_click_sound();
+                    TunnelRacer.soundManager.run_click_sound();
                     is_double_once_pressed = true;
                 }
 
@@ -126,7 +125,7 @@ public class GameOverScreen implements Screen {
                 //  game.setScreen(new MainGame(game));
 
                 isX2 = false;
-                RoadHog.soundManager.run_click_sound();
+                TunnelRacer.soundManager.run_click_sound();
                 game.setMainGame(game, true);
             }
 
@@ -158,7 +157,7 @@ public class GameOverScreen implements Screen {
     public void render(float delta) {
         Gdx.gl.glClearColor(0, 0, 0, 0);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        RoadHog.mainGame.render(1);
+        TunnelRacer.mainGame.render(1);
 
         update();
         over_stage.draw();

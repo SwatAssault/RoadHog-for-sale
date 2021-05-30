@@ -17,11 +17,11 @@ android {
         exclude 'META-INF/robovm/ios/robovm.xml'
     }
     defaultConfig {
-        applicationId "com.awprecords.roadhog"
+        applicationId "com.diplom.tunnelRacer"
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 4
-        versionName "1.3"
+        versionCode 1
+        versionName "1.0"
     }
     buildTypes {
         release {
@@ -86,7 +86,7 @@ task run(type: Exec) {
     }
 
     def adb = path + "/platform-tools/adb"
-    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.awprecords.roadhog/com.awprecords.roadhog.AndroidLauncher'
+    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.diplom.tunnelRacer/com.diplom.tunnelRacer.AndroidLauncher'
 }
 
 // sets up the Android Eclipse project, using the old Ant based build.

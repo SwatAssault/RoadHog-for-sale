@@ -1,4 +1,4 @@
-package com.awprecords.roadhog;
+package com.diplom.tunnelRacer;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
@@ -92,10 +92,6 @@ public class Police {
             MainGame.upLvl();
         }
         tap_count = 0;
-
-
-//        play_sirens = false;
-//        RoadHog.soundManager.police_sound.stop();
     }
 
     public void render(SpriteBatch batch) {

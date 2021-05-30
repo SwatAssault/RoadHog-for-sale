@@ -29,7 +29,7 @@ public class PagedScrollPane extends ScrollPane {
         super(null);
         content = new Table();
         content.defaults().space(50);
-      // setWidget(content);
+        setWidget(content);
 
         batch = new SpriteBatch();
 
@@ -44,21 +44,21 @@ public class PagedScrollPane extends ScrollPane {
         super(null, skin);
         content = new Table();
         content.defaults().space(50);
-      //  setWidget(content);
+        setWidget(content);
     }
 
     public PagedScrollPane(Skin skin, String styleName) {
         super(null, skin, styleName);
         content = new Table();
         content.defaults().space(50);
-       // setWidget(content);
+        setWidget(content);
     }
 
     public PagedScrollPane(Actor widget, ScrollPaneStyle style) {
         super(null, style);
         content = new Table();
         content.defaults().space(50);
-      //  setWidget(content);
+        setWidget(content);
     }
 
     public void addPages(Actor... pages) {

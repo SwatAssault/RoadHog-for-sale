@@ -1,7 +1,7 @@
 package Screens;
 
-import com.awprecords.roadhog.MainGame;
-import com.awprecords.roadhog.RoadHog;
+import com.diplom.tunnelRacer.MainGame;
+import com.diplom.tunnelRacer.TunnelRacer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
@@ -52,9 +52,9 @@ public class SettingsScreen implements Screen {
 
     public static ArrayList<Image> on_off_mass;
 
-    public static RoadHog game;
+    public static TunnelRacer game;
 
-    public SettingsScreen(final RoadHog game) {
+    public SettingsScreen(final TunnelRacer game) {
 
         this.game = game;
 
@@ -86,16 +86,16 @@ public class SettingsScreen implements Screen {
             public void clicked(InputEvent event, float x, float y) {
 
                 if (MenuScreen.on_off_switches[0] == true) {
-                    RoadHog.soundManager.menu_music.setVolume(0);
-                    RoadHog.soundManager.game_music.setVolume(0);
+                    TunnelRacer.soundManager.menu_music.setVolume(0);
+                    TunnelRacer.soundManager.game_music.setVolume(0);
                     MenuScreen.on_off_switches[0] = false;
-                    RoadHog.soundManager.run_click_sound();
+                    TunnelRacer.soundManager.run_click_sound();
                     on_off_mass.get(0).setDrawable(on_off_textures.get(MenuScreen.on_off_switches[0] ? 1 : 0));
                 } else {
-                    RoadHog.soundManager.menu_music.setVolume(0.1f);
-                    RoadHog.soundManager.game_music.setVolume(0.05f);
+                    TunnelRacer.soundManager.menu_music.setVolume(0.1f);
+                    TunnelRacer.soundManager.game_music.setVolume(0.05f);
                     MenuScreen.on_off_switches[0] = true;
-                    RoadHog.soundManager.run_click_sound();
+                    TunnelRacer.soundManager.run_click_sound();
                     on_off_mass.get(0).setDrawable(on_off_textures.get(MenuScreen.on_off_switches[0] ? 1 : 0));
                 }
 
@@ -109,11 +109,11 @@ public class SettingsScreen implements Screen {
             public void clicked(InputEvent event, float x, float y) {
 
                 if (MenuScreen.on_off_switches[1] == true) {
-                    RoadHog.soundManager.run_click_sound();
+                    TunnelRacer.soundManager.run_click_sound();
                     MenuScreen.on_off_switches[1] = false;
                     on_off_mass.get(1).setDrawable(on_off_textures.get(MenuScreen.on_off_switches[1] ? 1 : 0));
                 } else {
-                    RoadHog.soundManager.run_click_sound();
+                    TunnelRacer.soundManager.run_click_sound();
                     MenuScreen.on_off_switches[1] = true;
                     on_off_mass.get(1).setDrawable(on_off_textures.get(MenuScreen.on_off_switches[1] ? 1 : 0));
                 }
@@ -128,11 +128,11 @@ public class SettingsScreen implements Screen {
             public void clicked(InputEvent event, float x, float y) {
 
                 if (MenuScreen.on_off_switches[2] == true) {
-                    RoadHog.soundManager.run_click_sound();
+                    TunnelRacer.soundManager.run_click_sound();
                     MenuScreen.on_off_switches[2] = false;
                     on_off_mass.get(2).setDrawable(on_off_textures.get(MenuScreen.on_off_switches[2] ? 1 : 0));
                 } else {
-                    RoadHog.soundManager.run_click_sound();
+                    TunnelRacer.soundManager.run_click_sound();
                     MenuScreen.on_off_switches[2] = true;
                     on_off_mass.get(2).setDrawable(on_off_textures.get(MenuScreen.on_off_switches[2] ? 1 : 0));
 
@@ -169,7 +169,7 @@ public class SettingsScreen implements Screen {
             @Override
             public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
                 game.setMenuScreen(game);
-                RoadHog.soundManager.run_click_sound();
+                TunnelRacer.soundManager.run_click_sound();
             }
         });
 

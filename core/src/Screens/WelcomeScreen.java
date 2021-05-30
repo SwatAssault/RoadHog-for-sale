@@ -1,7 +1,7 @@
 package Screens;
 
-import com.awprecords.roadhog.MainGame;
-import com.awprecords.roadhog.RoadHog;
+import com.diplom.tunnelRacer.MainGame;
+import com.diplom.tunnelRacer.TunnelRacer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
@@ -19,7 +19,7 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 
 public class WelcomeScreen implements Screen {
 
-    RoadHog game;
+    TunnelRacer game;
 
     private SpriteBatch batch;
 
@@ -36,7 +36,7 @@ public class WelcomeScreen implements Screen {
     private Texture double_texture;
     private Image welcome_bg;
 
-    public WelcomeScreen(final RoadHog game) {
+    public WelcomeScreen(final TunnelRacer game) {
 
         this.game = game;
 
@@ -76,7 +76,7 @@ public class WelcomeScreen implements Screen {
             public void clicked(InputEvent event, float x, float y) {
                 MenuScreen.coins += 25;
                 MenuScreen.preffs.save_coins();
-                RoadHog.soundManager.run_click_sound();
+                TunnelRacer.soundManager.run_click_sound();
                 game.setMenuScreen(game);
             }
         });
@@ -105,7 +105,7 @@ public class WelcomeScreen implements Screen {
     public void render(float delta) {
         Gdx.gl.glClearColor(0, 0, 0, 0);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        RoadHog.menuScreen.render(1);
+        TunnelRacer.menuScreen.render(1);
         camera.update();
 
 

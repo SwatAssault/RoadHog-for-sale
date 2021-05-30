@@ -1,7 +1,7 @@
 package Screens;
 
-import com.awprecords.roadhog.MainGame;
-import com.awprecords.roadhog.RoadHog;
+import com.diplom.tunnelRacer.MainGame;
+import com.diplom.tunnelRacer.TunnelRacer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
@@ -13,7 +13,6 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
-import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
@@ -37,9 +36,9 @@ public class DoubleScreen implements Screen {
 
     public static Stage stage;
 
-    public static RoadHog game;
+    public static TunnelRacer game;
 
-    public DoubleScreen(final RoadHog game) {
+    public DoubleScreen(final TunnelRacer game) {
 
         this.game = game;
 
@@ -75,7 +74,7 @@ public class DoubleScreen implements Screen {
 
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                RoadHog.soundManager.run_click_sound();
+                TunnelRacer.soundManager.run_click_sound();
                 game.setGameOverScreen(game);
             }
         });
@@ -104,7 +103,7 @@ public class DoubleScreen implements Screen {
     public void render(float delta) {
         Gdx.gl.glClearColor(0, 0, 0, 0);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        RoadHog.gameOverScreen.render(1);
+        TunnelRacer.gameOverScreen.render(1);
 
         camera.update();
 

@@ -1,16 +1,15 @@
 package Screens;
 
-import com.awprecords.roadhog.MainGame;
-import com.awprecords.roadhog.Pedals;
-import com.awprecords.roadhog.Police;
-import com.awprecords.roadhog.RoadHog;
+import com.diplom.tunnelRacer.MainGame;
+import com.diplom.tunnelRacer.Pedals;
+import com.diplom.tunnelRacer.Police;
+import com.diplom.tunnelRacer.TunnelRacer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
@@ -25,7 +24,7 @@ import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
 import Scenes.HUD;
-import shit.Busters;
+import items.Busters;
 
 public class PauseScreen implements Screen {
 
@@ -44,7 +43,7 @@ public class PauseScreen implements Screen {
 
     private Image pause_bg;
 
-    public static RoadHog game;
+    public static TunnelRacer game;
     public static Stage pause_stage;
     SpriteBatch pause_batch;
     long timeOfBuster;
@@ -52,7 +51,7 @@ public class PauseScreen implements Screen {
     ImageButton resume_btn;
     ImageButton returnHome_btn;
 
-    public PauseScreen(final RoadHog game) {
+    public PauseScreen(final TunnelRacer game) {
 
         timeOfBuster = TimeUtils.timeSinceMillis(Busters.time);
         this.game = game;
@@ -97,12 +96,12 @@ public class PauseScreen implements Screen {
 
             @Override
             public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-                RoadHog.soundManager.run_click_sound();
+                TunnelRacer.soundManager.run_click_sound();
                 game.setMenuScreen(game);
-                RoadHog.soundManager.run_menu_music();
-                RoadHog.soundManager.stop_game_music();
+                TunnelRacer.soundManager.run_menu_music();
+                TunnelRacer.soundManager.stop_game_music();
                 if (MenuScreen.on_off_switches[0] == false) {
-                    RoadHog.soundManager.menu_music.setVolume(0);
+                    TunnelRacer.soundManager.menu_music.setVolume(0);
                 }
             }
         });
@@ -112,7 +111,7 @@ public class PauseScreen implements Screen {
             public void clicked(InputEvent event, float x, float y) {
                 Gdx.input.setInputProcessor(HUD.stage);
 
-                RoadHog.soundManager.run_click_sound();
+                TunnelRacer.soundManager.run_click_sound();
                 Pedals.isNitro_on = false;
                 Pedals.isBrake = false;
                 game.setMainGame(game, false);
@@ -159,7 +158,7 @@ public class PauseScreen implements Screen {
     public void render(float delta) {
         Gdx.gl.glClearColor(0, 0, 0, 0);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        RoadHog.mainGame.render(1);
+        TunnelRacer.mainGame.render(1);
         update();
 
         pause_batch.begin();

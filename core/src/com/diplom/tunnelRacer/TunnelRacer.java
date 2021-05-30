@@ -1,10 +1,9 @@
-package com.awprecords.roadhog;
+package com.diplom.tunnelRacer;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 
 import Scenes.HUD;
-import Screens.Awprecords;
 import Screens.DoubleScreen;
 import Screens.ExtraScreen;
 import Screens.GameOverScreen;
@@ -14,7 +13,7 @@ import Screens.PauseScreen;
 import Screens.SettingsScreen;
 import Screens.WelcomeScreen;
 
-public class RoadHog extends Game {
+public class TunnelRacer extends Game {
 
     public static SoundManager soundManager;
 
@@ -28,12 +27,11 @@ public class RoadHog extends Game {
     public static DoubleScreen doubleScreen;
     public static ExtraScreen extraScreen;
     public static WelcomeScreen welcomeScreen;
-    public static Awprecords awprecords;
     /////////Screens////////////////////
 
     public char class_name;
 
-    public RoadHog() {
+    public TunnelRacer() {
 
     }
 
@@ -48,21 +46,21 @@ public class RoadHog extends Game {
         class_name = 'x';
     }
 
-    public void setGameOverScreen(RoadHog game) {
+    public void setGameOverScreen(TunnelRacer game) {
         if (gameOverScreen == null)
             gameOverScreen = new GameOverScreen(this);
         game.setScreen(gameOverScreen);
         Gdx.input.setInputProcessor(GameOverScreen.over_stage);
     }
 
-    public void setPauseScreen(RoadHog game) {
+    public void setPauseScreen(TunnelRacer game) {
         if (pauseScreen == null)
             pauseScreen = new PauseScreen(this);
         game.setScreen(pauseScreen);
         Gdx.input.setInputProcessor(PauseScreen.pause_stage);
     }
 
-    public void setMainGame(RoadHog game, boolean flag) {
+    public void setMainGame(TunnelRacer game, boolean flag) {
         if (mainGame == null)
             mainGame = new MainGame(this);
         if (flag)
@@ -71,28 +69,28 @@ public class RoadHog extends Game {
         Gdx.input.setInputProcessor(HUD.stage);
     }
 
-    public void setSettingsScreen(RoadHog game) {
+    public void setSettingsScreen(TunnelRacer game) {
         if (settingsScreen == null)
             settingsScreen = new SettingsScreen(this);
         game.setScreen(settingsScreen);
         Gdx.input.setInputProcessor(SettingsScreen.stage);
     }
 
-    public void setGarageScreen(RoadHog game) {
+    public void setGarageScreen(TunnelRacer game) {
         if (garageScreen == null)
             garageScreen = new GarageScreen(this);
         game.setScreen(garageScreen);
         Gdx.input.setInputProcessor(GarageScreen.stage);
     }
 
-    public void setMenuScreen(RoadHog game) {
+    public void setMenuScreen(TunnelRacer game) {
         if (menuScreen == null)
             menuScreen = new MenuScreen(this);
         game.setScreen(menuScreen);
         Gdx.input.setInputProcessor(MenuScreen.stage);
     }
 
-    public void setDoubleScreen(RoadHog game) {
+    public void setDoubleScreen(TunnelRacer game) {
         if (doubleScreen == null) {
             doubleScreen = new DoubleScreen(this);
         }
@@ -100,7 +98,7 @@ public class RoadHog extends Game {
         Gdx.input.setInputProcessor(DoubleScreen.stage);
     }
 
-    public void setExtraScreen(RoadHog game) {
+    public void setExtraScreen(TunnelRacer game) {
         if (extraScreen == null) {
             extraScreen = new ExtraScreen(this);
         }
@@ -108,7 +106,7 @@ public class RoadHog extends Game {
         Gdx.input.setInputProcessor(ExtraScreen.stage);
     }
 
-    public void setWelcomeScreen(RoadHog game) {
+    public void setWelcomeScreen(TunnelRacer game) {
         if (welcomeScreen == null) {
             welcomeScreen = new WelcomeScreen(this);
         }

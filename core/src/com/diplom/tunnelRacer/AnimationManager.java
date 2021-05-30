@@ -1,4 +1,4 @@
-package com.awprecords.roadhog;
+package com.diplom.tunnelRacer;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
@@ -11,7 +11,7 @@ import com.badlogic.gdx.utils.TimeUtils;
 
 import Screens.GarageScreen;
 import Screens.MenuScreen;
-import shit.Coins;
+import items.Coins;
 
 import static utils.Constants.PPM;
 

@@ -1,27 +1,16 @@
-package com.awprecords.roadhog;
+package com.diplom.tunnelRacer;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
-import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.reward.RewardItem;
-import com.google.android.gms.ads.reward.RewardedVideoAd;
-import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
 public class AndroidLauncher extends AndroidApplication {
 
@@ -60,13 +49,13 @@ public class AndroidLauncher extends AndroidApplication {
             }
         };
 
-        View gameView = initializeForView(new RoadHog(), config);
+        View gameView = initializeForView(new TunnelRacer(), config);
         layout.addView(gameView);
 
         setContentView(layout);
-
-        try { Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
-        } catch (Exception e) {}
+//
+//        try { Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
+//        } catch (Exception e) {}
     }
 
 

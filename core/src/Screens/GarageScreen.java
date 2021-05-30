@@ -1,9 +1,9 @@
 package Screens;
 
-import com.awprecords.roadhog.AnimationManager;
-import com.awprecords.roadhog.MainGame;
-import com.awprecords.roadhog.Racer;
-import com.awprecords.roadhog.RoadHog;
+import com.diplom.tunnelRacer.AnimationManager;
+import com.diplom.tunnelRacer.MainGame;
+import com.diplom.tunnelRacer.Racer;
+import com.diplom.tunnelRacer.TunnelRacer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
@@ -37,7 +37,7 @@ import Skins.skin;
 
 public class GarageScreen implements Screen {
 
-    final RoadHog game;
+    final TunnelRacer game;
 
     SpriteBatch batch;
 
@@ -154,7 +154,7 @@ public class GarageScreen implements Screen {
     private Texture plus_tex;
     private Texture plus_press_tex;
 
-    public GarageScreen(final RoadHog game) {
+    public GarageScreen(final TunnelRacer game) {
 
         particle_buy = new ParticleEffect();
         particle_buy.load(Gdx.files.internal("garage/particles_buy"), Gdx.files.internal("garage"));
@@ -189,13 +189,13 @@ public class GarageScreen implements Screen {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 game.setExtraScreen(game);
-                RoadHog.soundManager.run_click_sound();
+                TunnelRacer.soundManager.run_click_sound();
             }
 
         });
 
 
-        locked11 = new TextureRegionDrawable(new Texture("Album/album_car_11_locked.png"));
+        locked11 = new TextureRegionDrawable(new Texture(Gdx.files.internal("albumGarage/album_car_11_locked.png")));
         locked11.getRegion().getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
 
         //   fontGenerator = new FreeTypeFontGenerator(Gdx.files.internal("PermanentMarker-Regular.ttf"));
@@ -238,7 +238,7 @@ public class GarageScreen implements Screen {
 
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                RoadHog.soundManager.run_click_sound();
+                TunnelRacer.soundManager.run_click_sound();
                 if (MenuScreen.is_bought[current_car]) {
 
                     if (!four_is_checked) {
@@ -287,8 +287,8 @@ public class GarageScreen implements Screen {
                     MenuScreen.preffs.save_bought();
                     draw_bought_stamp = true;
                     isRenderParicle_buy = true;
-                    RoadHog.soundManager.run_buy_sound();
-                    RoadHog.soundManager.run_click_sound();
+                    TunnelRacer.soundManager.run_buy_sound();
+                    TunnelRacer.soundManager.run_click_sound();
                 }
 
 
@@ -409,7 +409,7 @@ public class GarageScreen implements Screen {
                     four_is_checked = true;
                     triangleX = four.get(0).getX();
                     triangleY = 147;
-                    RoadHog.soundManager.run_click_sound();
+                    TunnelRacer.soundManager.run_click_sound();
                 }
 
             }
@@ -425,7 +425,7 @@ public class GarageScreen implements Screen {
                     four_is_checked = true;
                     triangleX = four.get(1).getX();
                     triangleY = 147;
-                    RoadHog.soundManager.run_click_sound();
+                    TunnelRacer.soundManager.run_click_sound();
                 }
 
             }
@@ -440,7 +440,7 @@ public class GarageScreen implements Screen {
                     four_is_checked = true;
                     triangleX = four.get(2).getX();
                     triangleY = 147;
-                    RoadHog.soundManager.run_click_sound();
+                    TunnelRacer.soundManager.run_click_sound();
                 }
 
             }
@@ -455,7 +455,7 @@ public class GarageScreen implements Screen {
                     four_is_checked = true;
                     triangleX = four.get(3).getX();
                     triangleY = 147;
-                    RoadHog.soundManager.run_click_sound();
+                    TunnelRacer.soundManager.run_click_sound();
                 }
 
             }
@@ -476,27 +476,27 @@ public class GarageScreen implements Screen {
         table_onTop = new Table();
         locked = new Table();
 
-        btn1_texture = new Texture("Album/album_car_1.png");
+        btn1_texture = new Texture(Gdx.files.internal("albumGarage/album_car_1.png"));
         btn1_texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        btn2_texture = new Texture("Album/album_car_2.png");
+        btn2_texture = new Texture(Gdx.files.internal("albumGarage/album_car_2.png"));
         btn2_texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        btn3_texture = new Texture("Album/album_car_3.png");
+        btn3_texture = new Texture(Gdx.files.internal("albumGarage/album_car_3.png"));
         btn3_texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        btn4_texture = new Texture("Album/album_car_4.png");
+        btn4_texture = new Texture(Gdx.files.internal("albumGarage/album_car_4.png"));
         btn4_texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        btn5_texture = new Texture("Album/album_car_5.png");
+        btn5_texture = new Texture(Gdx.files.internal("albumGarage/album_car_5.png"));
         btn5_texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        btn6_texture = new Texture("Album/album_car_6.png");
+        btn6_texture = new Texture(Gdx.files.internal("albumGarage/album_car_6.png"));
         btn6_texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        btn7_texture = new Texture("Album/album_car_7.png");
+        btn7_texture = new Texture(Gdx.files.internal("albumGarage/album_car_7.png"));
         btn7_texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        btn8_texture = new Texture("Album/album_car_8.png");
+        btn8_texture = new Texture(Gdx.files.internal("albumGarage/album_car_8.png"));
         btn8_texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        btn9_texture = new Texture("Album/album_car_9.png");
+        btn9_texture = new Texture(Gdx.files.internal("albumGarage/album_car_9.png"));
         btn9_texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        btn10_texture = new Texture("Album/album_car_10.png");
+        btn10_texture = new Texture(Gdx.files.internal("albumGarage/album_car_10.png"));
         btn10_texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
-        btn11_texture = new Texture("Album/album_car_11.png");
+        btn11_texture = new Texture(Gdx.files.internal("albumGarage/album_car_11.png"));
         btn11_texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
 
         not_locked_11 = new TextureRegionDrawable(btn11_texture);
@@ -576,7 +576,7 @@ public class GarageScreen implements Screen {
 
                 MenuScreen.preffs.save_racer();
                 MenuScreen.preffs.save_coins();
-                RoadHog.soundManager.run_click_sound();
+                TunnelRacer.soundManager.run_click_sound();
                 game.setMenuScreen(game);
 
             }

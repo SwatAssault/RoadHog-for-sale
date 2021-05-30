@@ -1,4 +1,4 @@
-package com.awprecords.roadhog;
+package com.diplom.tunnelRacer;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.physics.box2d.Body;
@@ -10,9 +10,9 @@ import com.badlogic.gdx.physics.box2d.Manifold;
 import com.badlogic.gdx.utils.TimeUtils;
 
 import Screens.MenuScreen;
-import shit.Busters;
-import shit.Coins;
-import shit.Pits;
+import items.Busters;
+import items.Coins;
+import items.Pits;
 
 public class Collisions implements ContactListener {
 
@@ -117,7 +117,7 @@ public class Collisions implements ContactListener {
                         ((Coins.Coin) o2).setIsRenderParicle(true);
                     Coins.searchIndex(b2);
                 }
-                RoadHog.soundManager.run_coin_sound();
+                TunnelRacer.soundManager.run_coin_sound();
             }
         }
 
@@ -125,14 +125,14 @@ public class Collisions implements ContactListener {
             if (!MainGame.GameOver) {
                 if (o1.getClass() == Busters.Buster.class) {
                     if (((Busters.Buster) o1).isAlive) {
-                        RoadHog.soundManager.run_booster_pickup_sound();
+                        TunnelRacer.soundManager.run_booster_pickup_sound();
                         ((Busters.Buster) o1).setIsRenderParicle(true);
                     }
 
                     Busters.searchIndex(b1);
                 } else {
                     if (((Busters.Buster) o2).isAlive) {
-                        RoadHog.soundManager.run_booster_pickup_sound();
+                        TunnelRacer.soundManager.run_booster_pickup_sound();
                         ((Busters.Buster) o2).setIsRenderParicle(true);
                     }
 

@@ -1,7 +1,7 @@
 package Screens;
 
-import com.awprecords.roadhog.MainGame;
-import com.awprecords.roadhog.RoadHog;
+import com.diplom.tunnelRacer.MainGame;
+import com.diplom.tunnelRacer.TunnelRacer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
@@ -20,7 +20,7 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 
 public class ExtraScreen implements Screen {
 
-    public static RoadHog game;
+    public static TunnelRacer game;
 
     private SpriteBatch batch;
 
@@ -37,7 +37,7 @@ public class ExtraScreen implements Screen {
     private Texture extra_texture;
     private Image extra_bg;
 
-    public ExtraScreen(final RoadHog game) {
+    public ExtraScreen(final TunnelRacer game) {
 
         this.game = game;
 
@@ -74,7 +74,7 @@ public class ExtraScreen implements Screen {
 
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                RoadHog.soundManager.run_click_sound();
+                TunnelRacer.soundManager.run_click_sound();
                 game.setGarageScreen(game);
             }
         });
@@ -102,7 +102,7 @@ public class ExtraScreen implements Screen {
     public void render(float delta) {
         Gdx.gl.glClearColor(0, 0, 0, 0);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        RoadHog.garageScreen.render(1);
+        TunnelRacer.garageScreen.render(1);
         camera.update();
         if (Gdx.input.isKeyJustPressed(Input.Keys.BACK)) {
             game.setGarageScreen(game);
